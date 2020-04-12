@@ -9,12 +9,12 @@ underwater_classes = ['target']
 if __name__ == '__main__':
 
     #生成test的伪标签JSON的路径
-    test_json_raw = json.load(open('/home/mtc206/new_ssd/zql/data/zhanjiang/shengxue/a-test-image/test_A_shengxue.json', "r"))
+    test_json_raw = json.load(open('./data/zhanjiang/shengxue/a-test-image/test_B_shengxue.json', "r"))
 
     test_json = 'temp_results/test.bbox.json'
     test_json = json.load(open(test_json, "r"))
 
-    submit_path = './results/submit/'
+    submit_path = './zhanjiang/'
     os.makedirs(submit_path, exist_ok=True)
     img = test_json_raw['images']
     images = []
